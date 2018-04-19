@@ -12,6 +12,14 @@ This is still quite rough.
 
 I'm still tweaking this, but in a short-episode-length setting, a PPO agent can learn a policy that outperforms the optimum constant-value policy. 
 
+# Requirements:
+This model was developed in the conda environment descsribed in conda.yaml
 
+Most crucial dependencies are: 
+
+- tensorforce (latest)
+- tensorflow 1.4
+- snakemake (latest)
+- gym (latest)
 
 
