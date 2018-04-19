@@ -1,0 +1,14 @@
+grid:
+  model:
+    - gym: ["RBCGym-v0"]
+      model_config: [ppo_config]
+      net_config: "actor_net"
+      layer_size: [64,128]
+singularity_image: null
+episodes: 1000
+max_timesteps: 20
+location: 'local'
+base_dir: ""
+
+
+

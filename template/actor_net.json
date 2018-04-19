@@ -1,0 +1,2 @@
+
+{% include ["model_config/" + model['net_config'] + ".json",] %}

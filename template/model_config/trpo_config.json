@@ -1,0 +1,50 @@
+{
+    "type": "trpo_agent",
+
+    "update_mode": {
+        "unit": "episodes",
+        "batch_size": 64,
+        "frequency": 20
+    },
+    "memory": {
+        "type": "latest",
+        "include_next_states": false,
+        "capacity": 200000
+    },
+
+    "learning_rate": 1e-4,
+
+    "discount": 0.97,
+    "entropy_regularization": null,
+    "gae_lambda": null,
+    "likelihood_ratio_clipping": null,
+
+    "baseline_mode": "states",
+    "baseline": {
+        "type": "mlp",
+        "sizes": [32, 32]
+    },
+    "baseline_optimizer": {
+        "type": "multi_step",
+        "optimizer": {
+            "type": "adam",
+            "learning_rate": 1e-4
+        },
+        "num_steps": 21
+    },
+
+    "saver": {
+        "directory": "Graph/{{ path }}",
+        "seconds": 20
+    },
+    "summarizer": {
+        "directory": "Graph/{{ path }}",
+        "labels": ["rewards"],
+        "seconds": 20
+    },
+    "execution": {
+        "type": "single",
+        "session_config": null,
+        "distributed_spec": null
+    }
+}

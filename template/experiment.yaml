@@ -1,0 +1,3 @@
+gym: {{ model['gym']|d('SET GYM') }}
+path: {{ path }}
+episodes: {{ episodes }}
